@@ -1,4 +1,5 @@
 const gameContainer = document.querySelector(".game-container")
+const bodyContainer = document.querySelector(".body-container")
 const scoreContainer = document.querySelector(".score-container")
 const quantity = localStorage.getItem("quantity");
 const quantityOfCards = 72;
@@ -126,15 +127,15 @@ function setScoreValue() {
 
     if (Number(quantity) === pairCounter) {
         setTimeout(() => {
-            gameContainer.innerHTML = `<div class="end-text"><h1>Udało Ci się!</h1>
-            <p>Odkryłeś wszystkie pary wykorzystując ${attemptsCounter} próby</p>
+            bodyContainer.innerHTML = `<div class="end-text"><h1>Udało Ci się!</h1>
+            <p>Odkryłeś wszystkie pary korzystając z ${attemptsCounter} prób</p>
             <button class="end-btn new-game-btn">Zagraj jeszcze raz!</button></div>`
             scoreContainer.style.display = "none";
         }, 2000)
 
     }
     else if (Number(quantity) * 3 === attemptsCounter) {
-        gameContainer.innerHTML = `<div class="end-text"><h1>Niestety nie udało się!</h1>
+        bodyContainer.innerHTML = `<div class="end-text"><h1>Niestety nie udało się!</h1>
         <p>Wykorzystałeś wszystkie możliwe próby</p>
         <button class="end-btn new-game-btn">Spróbuj ponownie!</button></div>`
         scoreContainer.style.display = "none";

@@ -165,29 +165,30 @@ body {
         margin-bottom: 15px;
     }
 
+    .buttons button {
+        font-size: 1em;
+    }
+
 }
 
 
 /* game */
 
 .body-container {
-    width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .game-container {
-    margin-top: 160px;
-    width: 1100px;
+    margin-top: 150px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-
+    width: 100%;
+    max-width: 1100px;
 }
-
 
 .card-color {
     background-color: #ff99c8;
@@ -201,13 +202,14 @@ body {
 
 .score-container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 1070px;
+    width: 100%;
+    max-width: 1070px;
     color: #ff99c8;
     font-size: 1.5em;
     font-weight: bold;
+    padding-bottom: 30px;
 }
 
 .new-game-btn,
@@ -219,11 +221,9 @@ body {
     font-size: 0.8em;
     font-weight: bold;
     padding: 8px 25px;
-    margin: 0;
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
-
 
 .new-game-btn:hover {
     background-color: #d881a9;
@@ -261,7 +261,7 @@ body {
 
 .end-text {
     font-size: 1.5em;
-    margin-top: 150px;
+    margin-top: 300px;
 }
 
 .end-text h1 {
@@ -275,16 +275,12 @@ body {
 }
 
 @media (max-width: 1400px) {
-
     .game-container {
         margin-top: 20px;
     }
-
 }
 
-/* 
 @media (max-width: 1150px) {
-
     .body-container {
         width: 100vw;
         justify-content: center;
@@ -292,13 +288,11 @@ body {
 
     .game-container {
         margin-top: 10px;
-        width: 70%;
+        max-width: 70%;
     }
 
-
     .score-container {
-        width: 1000px;
-
+        width: 100%;
     }
 
     .img-container {
@@ -309,30 +303,26 @@ body {
 
     .score-container {
         width: 68%;
-        font-size: 1em;
     }
 
-
-
-
-} */
-
-
-/* Do zrobienia:
-
-//zrobić wersję poniżej 1150px
-//przetestować wszystkie wersje  */
-
-@media (max-width: 433px) {
-
-    .body-container {
-        width: 100vw;
-        justify-content: center;
+    .score-container p {
+        font-size: 0.7em;
     }
 
+    .score-container button {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width: 800px) {
     .game-container {
-        margin-top: 10px;
-        width: 98%;
+        max-width: 90%;
+    }
+
+    .img-container {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
     }
 
 
@@ -345,6 +335,37 @@ body {
     .score-container p {
         margin-bottom: 5px;
 
+    }
+}
+
+@media (max-width: 605px) {
+    .img-container {
+        width: 90px;
+        height: 90px;
+        margin: 5px;
+    }
+
+    .end-text {
+        font-size: 1em;
+        margin-top: 250px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-container {
+        width: 100vw;
+        justify-content: center;
+    }
+
+
+    .game-container {
+        padding-right: 8px;
+        margin-top: 10px;
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 10px;
     }
 
     .img-container {
@@ -359,6 +380,41 @@ body {
         padding: 8px 25px;
         border-radius: 20px;
     }
+}
 
 
+
+@media (max-height: 844px) {
+    .end-text {
+        margin-top: 230px;
+    }
+
+    .game-container {
+        margin-top: 70px;
+    }
+
+}
+
+@media (max-height: 722px) {
+    .game-container {
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-height: 600px) {
+    .end-text {
+        margin-top: 150px;
+    }
+
+    .game-container {
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-height: 400px) {
+    .end-text {
+        margin-top: 100px;
+    }
 }
