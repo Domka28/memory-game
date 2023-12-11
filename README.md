@@ -4,3 +4,7 @@ The goal is to find all pairs of the same cards, and the player who finds more o
 The application was written in JavaScript using HTML and CSS.
 
 The application was created for learning purposes and to develop skills in JavaScript.
+
+Link to the deployed website: https://domka28.github.io/memory-game/
+
+
