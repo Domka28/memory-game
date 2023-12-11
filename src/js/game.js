@@ -29,14 +29,13 @@ const shuffledArray = newDuplicateArrayOfRandomNumbers.sort((a, b) => 0.5 - Math
 function renderImages() {
     newDuplicateArrayOfRandomNumbers.forEach(element => {
         gameContainer.innerHTML += `<div data-id="${element}" class="img-container card-color">
-     <img class="img" style="display:none" src="./src/img/img${element}.png">
+     <img class="img" style="display:none" src="./src/img/img${element}.PNG">
 </div>`
     });
 }
 
 function setGameContainerWidth() {
     const elementCount = newDuplicateArrayOfRandomNumbers.length;
-    console.log(window.innerWidth)
     if (window.innerWidth > 600) {
         if (elementCount === 16) {
             gameContainer.style.width = "600px";
@@ -144,7 +143,6 @@ function setScoreValue() {
 
 
 function newGame(e) {
-    console.log("dsffd")
     if (!e.target.classList.contains('new-game-btn')) return;
     window.location.href = "./index.html";
 }
